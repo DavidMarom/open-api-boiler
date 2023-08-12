@@ -1,0 +1,22 @@
+info:
+  title: "My API"
+  version: "1.0.0"
+
+openapi: 3.0.0
+paths:
+  /hi:
+    get:
+      summary: "Say hi"
+      operationId: functions.functions.say_hi
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        304:
+            description: "Not Modified"
