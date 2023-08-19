@@ -4,10 +4,10 @@ info:
 
 openapi: 3.0.0
 paths:
-  /hi:
+  /:
     get:
-      summary: "Say hi"
-      operationId: functions.functions.say_hi
+      summary: "Say hello"
+      operationId: functions.functions.say_hello
       responses:
         200:
           description: "OK"
@@ -19,4 +19,34 @@ paths:
                   message:
                     type: string
         304:
-            description: "Not Modified"
+          description: "Not Modified"
+
+
+  /get_users:
+    get:
+      summary: "Get users"
+      operationId: functions.functions.get_users
+      responses:
+        200:
+          $ref: "#/components/responses/users"
+        304:
+          description: "Not Modified"
+
+components:
+  responses:
+    users:
+      description: "OK"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/user"
+  schemas:
+    user:
+      type: object
+      properties:
+        name:
+          type: integer
+        age:
+          type: string
