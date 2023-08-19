@@ -47,10 +47,12 @@ components:
             example: |
               [
                 {
+                  "id": 1,
                   "name": "John",
                   "age": 30
                 },
                 {
+                  "id": 2,
                   "name": "Jane",
                   "age": 25
                 }
@@ -59,6 +61,8 @@ components:
     user:
       type: object
       properties:
+        id:
+          type: integer
         name:
           type: integer
         age:

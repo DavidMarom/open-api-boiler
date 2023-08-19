@@ -1,4 +1,7 @@
 connexion
 swagger-ui-bundle
 connexion[swagger-ui]
+supabase-py
+supabase
 Flask
+python-dotenv

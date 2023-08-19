@@ -1,8 +1,12 @@
-import os
 import connexion
+import os
+
 
 if __name__ == '__main__':
     print(f'Starting server')
+
+
+
     try:
         app = connexion.App(__name__, specification_dir='./')
         file_path = os.path.dirname(__file__)
