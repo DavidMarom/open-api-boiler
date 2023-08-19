@@ -25,6 +25,8 @@ paths:
   /get_users:
     get:
       summary: "Get users"
+      description: |
+        This is a description of the endpoint.
       operationId: functions.functions.get_users
       responses:
         200:
@@ -42,6 +44,17 @@ components:
             type: array
             items:
               $ref: "#/components/schemas/user"
+            example: |
+              [
+                {
+                  "name": "John",
+                  "age": 30
+                },
+                {
+                  "name": "Jane",
+                  "age": 25
+                }
+              ]
   schemas:
     user:
       type: object
