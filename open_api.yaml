@@ -34,6 +34,39 @@ paths:
         304:
           description: "Not Modified"
 
+  /get_user_by_id:
+    get:
+      summary: "Get user by ID"
+      operationId: functions.functions.get_user_by_id
+      parameters:
+        - name: id
+          in: query
+          description: "User ID"
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          $ref: "#/components/responses/users"
+        304:
+          description: "Not Modified"
+
+  /create_user:
+    post:
+      summary: "Create user"
+      operationId: functions.functions.create_user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/user"
+      responses:
+        200:
+          $ref: "#/components/responses/users"
+        304:
+          description: "Not Modified"
+
 components:
   responses:
     users:
@@ -64,6 +97,7 @@ components:
         id:
           type: integer
         name:
-          type: integer
-        age:
           type: string
+        age:
+          type: integer
+
