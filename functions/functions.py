@@ -28,6 +28,4 @@ def say_hello():
 
 
 def get_users():
-
-    # print(response)
-    return response
+    return response.data
