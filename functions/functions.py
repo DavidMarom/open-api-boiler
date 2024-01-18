@@ -10,8 +10,8 @@
 # supabase: Client = create_client(url, key)
 
 
-# def say_hello():
-#     return "This is the API for the api boiler app"
+def say_hello():
+    return "This is the API for the api boiler app"
 
 
 # def get_users():
