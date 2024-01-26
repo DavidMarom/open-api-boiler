@@ -22,50 +22,40 @@ paths:
           description: "Not Modified"
 
 
-  # /get_users:
-  #   get:
-  #     summary: "Get users"
-  #     description: |
-  #       This is a description of the endpoint.
-  #     operationId: functions.functions.get_users
-  #     responses:
-  #       200:
-  #         $ref: "#/components/responses/users"
-  #       304:
-  #         description: "Not Modified"
+  /add_user:
+    get:
+      summary: "Add a user"
+      operationId: functions.functions.add_user
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        304:
+          description: "Not Modified"
 
-  # /get_user_by_id:
-  #   get:
-  #     summary: "Get user by ID"
-  #     operationId: functions.functions.get_user_by_id
-  #     parameters:
-  #       - name: id
-  #         in: query
-  #         description: "User ID"
-  #         required: true
-  #         schema:
-  #           type: integer
-  #     responses:
-  #       200:
-  #         $ref: "#/components/responses/users"
-  #       304:
-  #         description: "Not Modified"
 
-  # /create_user:
-  #   post:
-  #     summary: "Create user"
-  #     operationId: functions.functions.create_user
-  #     requestBody:
-  #       required: true
-  #       content:
-  #         application/json:
-  #           schema:
-  #             $ref: "#/components/schemas/user"
-  #     responses:
-  #       200:
-  #         $ref: "#/components/responses/users"
-  #       304:
-  #         description: "Not Modified"
+  /get_users:
+    get:
+      summary: "get all users"
+      operationId: functions.functions.get_users
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        304:
+          description: "Not Modified"      
 
 components:
   responses:

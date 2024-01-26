@@ -4,3 +4,4 @@ connexion[swagger-ui]
 supabase-py
 Flask
 python-dotenv
+psycopg2-binary
